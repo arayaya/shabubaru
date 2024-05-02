@@ -105,7 +105,7 @@ function QueueReceptionPage() {
           <img className="logo" src="./img/logo.png" alt="logo" />
           <div className="div-loname">
             <p className="logo-name">SHABU BARU mini</p>
-            <p className="detail">The Mall Lifestore Ngamwingwan</p>
+            <p className="detail">The Mall Lifestore Ngamwongwan</p>
           </div>
         </div>
         <div className="right-section">
