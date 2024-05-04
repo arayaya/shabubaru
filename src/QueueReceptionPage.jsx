@@ -187,13 +187,13 @@ function QueueReceptionPage() {
         <div className="container-form">
           <div className="container-inform">
             <div className="div-name">
-              <p className="p-name">ชื่อลูกค้า</p>
               <InputUserData
+                label="ชื่อลูกค้า"
                 noti={notiName}
                 handleInputValue={handleInputname}
               />
-              <p className="p-name">เบอร์โทรศัพท์</p>
               <InputUserData
+                label="เบอร์โทรศัพท์"
                 noti={notiNumber}
                 handleInputValue={handleInputnumber}
               />
