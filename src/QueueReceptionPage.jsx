@@ -17,8 +17,8 @@ function QueueReceptionPage() {
   const [notiNumber, setnotiNumber] = useState("");
   // const currentQueueA = randomNumber(1, 200);
   // const currentQueueB = randomNumber(1, 200);
-  const [currentQueueA, setCurrentQueueA] = useState(randomNumber(1, 200));
-  const [currentQueueB, setCurrentQueueB] = useState(randomNumber(1, 200));
+  const [currentQueueA, setCurrentQueueA] = useState(randomNumber(1, 300));
+  const [currentQueueB, setCurrentQueueB] = useState(randomNumber(1, 300));
   function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
@@ -78,7 +78,7 @@ function QueueReceptionPage() {
     }
 
     if (valid) {
-      console.log("PASS");
+      // console.log("PASS");
       dispath(setcusType(cusType));
       dispath(setqueueLeft(queueL));
       dispath(setcurrentQueue(currentQ));
