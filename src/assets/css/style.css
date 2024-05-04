@@ -1,7 +1,9 @@
 @import url(https://db.onlinewebfonts.com/c/92ff8a15048d7347e0fae46d6386f338?family=DB+HelvethaicaMon+X+Cond);
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); */
 body {
   background-color: #fefaf1;
   font-family: "DB HelvethaicaMon X Cond";
+  /* font-family: "Nunito", sans-serif; */
 }
 
 .container {
@@ -219,9 +221,6 @@ body {
   margin: 90px 0px 0px 74px;
 }
 
-/* .div-name {
-} */
-
 .p-name {
   font-size: 36px;
   font-weight: bold;
@@ -326,7 +325,7 @@ body {
   }
 
   .div-name {
-    margin: 0px 30px 0px 0px;
+    margin: 0px 0px 0px 0px;
   }
 
   .div-submit {

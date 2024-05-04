@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./assets/css/style.css";
 import { setcusType, setqueueLeft, setcurrentQueue } from "./QueueSlice";
+import InputUserData from "./InputUserData";
 
 function QueueReceptionPage() {
   const dispath = useDispatch();
@@ -11,16 +12,20 @@ function QueueReceptionPage() {
   const [count, setCount] = useState(1);
   const [cusType, setcusT] = useState("");
   const [name, setname] = useState("");
-  const [number, setnumber] = useState("");
+  const [phonenumber, setphonenumber] = useState("");
   const [notiName, setnotiName] = useState("");
   const [notiNumber, setnotiNumber] = useState("");
-  const queueLeftA = 12;
-  const queueLeftB = 5;
-  const currentQueueA = 111;
-  const currentQueueB = 47;
+  // const currentQueueA = randomNumber(1, 200);
+  // const currentQueueB = randomNumber(1, 200);
+  const [currentQueueA, setCurrentQueueA] = useState(randomNumber(1, 200));
+  const [currentQueueB, setCurrentQueueB] = useState(randomNumber(1, 200));
+  function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+  const queueLeftA = currentQueueA - 1;
+  const queueLeftB = currentQueueB - 1;
   const [queueL, setqueueL] = useState();
   const [currentQ, setcurrentQ] = useState("");
-
   const timeZone = {
     day: "numeric",
     month: "long",
@@ -45,36 +50,31 @@ function QueueReceptionPage() {
   };
 
   const handleInputnumber = (event) => {
-    setnumber(event.target.value);
+    setphonenumber(event.target.value);
     setnotiNumber("");
   };
 
   const handleSubmit = () => {
+    let valid = true;
     const nameRegex = /^[A-Za-zก-ฮะ-์ ]+$/;
     const numberRegex = /^[0-9]+$/;
-    let valid = true;
-
     if (!name.trim()) {
       setnotiName("กรุณาป้อนชื่อ");
       valid = false;
     } else if (!nameRegex.test(name)) {
       setnotiName("กรุณาป้อนเฉพาะตัวอักษรเท่านั้น");
       valid = false;
-    } else {
-      setnotiName("");
     }
 
-    if (!number.trim()) {
+    if (!phonenumber.trim()) {
       setnotiNumber("กรุณาป้อนหมายเลขโทรศัพท์");
       valid = false;
-    } else if (!numberRegex.test(number)) {
+    } else if (!numberRegex.test(phonenumber)) {
       setnotiNumber("กรุณาป้อนเฉพาะตัวเลขเท่านั้น");
       valid = false;
-    } else if (number.length !== 10) {
+    } else if (phonenumber.length !== 10) {
       setnotiNumber("กรุณาป้อนหมายเลขโทรศัพท์ 10 หลัก");
       valid = false;
-    } else {
-      setnotiNumber("");
     }
 
     if (valid) {
@@ -100,6 +100,10 @@ function QueueReceptionPage() {
 
   return (
     <div>
+      <link
+        href="https://db.onlinewebfonts.com/c/92ff8a15048d7347e0fae46d6386f338?family=DB+HelvethaicaMon+X+Cond"
+        rel="stylesheet"
+      ></link>
       <div className="container">
         <div className="left-section">
           <img className="logo" src="./img/logo.png" alt="logo" />
@@ -184,21 +188,15 @@ function QueueReceptionPage() {
           <div className="container-inform">
             <div className="div-name">
               <p className="p-name">ชื่อลูกค้า</p>
-              <input
-                className="input-name"
-                type="text"
-                onChange={handleInputname}
+              <InputUserData
+                noti={notiName}
+                handleInputValue={handleInputname}
               />
-              <p className="noti">{notiName}</p>
-            </div>
-            <div className="div-phone">
-              <p className="p-phone">เบอร์โทร</p>
-              <input
-                className="input-phone"
-                type="text"
-                onChange={handleInputnumber}
+              <p className="p-name">เบอร์โทรศัพท์</p>
+              <InputUserData
+                noti={notiNumber}
+                handleInputValue={handleInputnumber}
               />
-              <p className="noti">{notiNumber}</p>
             </div>
           </div>
           <div className="div-submit">

@@ -20,7 +20,6 @@ export const queueSlice = createSlice({
   },
 });
 
-export const { setcusType, setqueueLeft, setcurrentQueue } =
-  queueSlice.actions;
+export const { setcusType, setqueueLeft, setcurrentQueue } = queueSlice.actions;
 
 export default queueSlice.reducer;
