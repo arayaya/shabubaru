@@ -193,7 +193,7 @@ function QueueReceptionPage() {
                 handleInputValue={handleInputname}
               />
               <InputUserData
-                label="เบอร์โทรศัพท์"
+                label="เบอร์โทร"
                 noti={notiNumber}
                 handleInputValue={handleInputnumber}
               />
