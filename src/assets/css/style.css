@@ -1,11 +1,17 @@
 @import url(https://db.onlinewebfonts.com/c/92ff8a15048d7347e0fae46d6386f338?family=DB+HelvethaicaMon+X+Cond);
 /* @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); */
+/* Include font preload */
+@font-face {
+  font-family: 'DB HelvethaicaMon X Cond';
+  src: url('https://db.onlinewebfonts.com/c/92ff8a15048d7347e0fae46d6386f338?family=DB+HelvethaicaMon+X+Cond') format('woff2');
+  font-display: swap; /* Use font display swap */
+}
+
 body {
   background-color: #fefaf1;
-  font-family: "DB HelvethaicaMon X Cond";
-  /* font-family: "Nunito", sans-serif; */
-  src: url("https://db.onlinewebfonts.com/t/92ff8a15048d7347e0fae46d6386f338.eot");
+  font-family: 'DB HelvethaicaMon X Cond', sans-serif; /* Use the custom font */
 }
+
 
 .container {
   display: flex;
