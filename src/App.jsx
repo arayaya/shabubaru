@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import QueueReceptionPage from "./QueueReceptionPage";
 import SummaryPage from "./SummaryPage";
+import "../src/assets/css/DBHelvethaicaMonXCond.ttf";
 
 function App() {
   return (

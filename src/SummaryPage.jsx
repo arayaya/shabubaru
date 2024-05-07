@@ -8,10 +8,10 @@ function SummaryPage() {
   const currentQueue = useSelector((state) => state.queue.currentQueue);
   return (
     <>
-      <link
+      {/* <link
         href="https://db.onlinewebfonts.com/c/92ff8a15048d7347e0fae46d6386f338?family=DB+HelvethaicaMon+X+Cond"
         rel="stylesheet"
-      ></link>
+      ></link> */}
       <div className="div-logo">
         <img className="sum-logo" src="./img/logo.png" alt="logo" />
       </div>

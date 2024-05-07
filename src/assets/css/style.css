@@ -1,17 +1,17 @@
-@import url(https://db.onlinewebfonts.com/c/92ff8a15048d7347e0fae46d6386f338?family=DB+HelvethaicaMon+X+Cond);
+/* @import url(https://db.onlinewebfonts.com/c/92ff8a15048d7347e0fae46d6386f338?family=DB+HelvethaicaMon+X+Cond); */
 /* @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); */
 /* Include font preload */
+
 @font-face {
-  font-family: 'DB HelvethaicaMon X Cond';
-  src: url('https://db.onlinewebfonts.com/c/92ff8a15048d7347e0fae46d6386f338?family=DB+HelvethaicaMon+X+Cond') format('woff2');
-  font-display: swap; /* Use font display swap */
+  font-family: "DB HelvethaicaMon X";
+  src: local("DB HelvethaicaMon X"),
+    url("./DBHelvethaicaMonXCond.ttf") format("truetype");
 }
 
 body {
   background-color: #fefaf1;
-  font-family: 'DB HelvethaicaMon X Cond', sans-serif; /* Use the custom font */
+  font-family: "DB HelvethaicaMon X";
 }
-
 
 .container {
   display: flex;
@@ -221,7 +221,7 @@ body {
   font-size: 58px;
   font-weight: bold;
   text-align: center;
-  font-family: "DB HelvethaicaMon X Cond";
+  font-family: "DB HelvethaicaMon X";
 }
 
 .container-form {
@@ -242,14 +242,14 @@ body {
   font-size: 42px;
   font-weight: bold;
   text-align: center;
-  font-family: "DB HelvethaicaMon X Cond";
+  font-family: "DB HelvethaicaMon X";
 }
 
 .noti {
   color: #ec5d39;
   font-size: 24px;
   margin: 4px 0px 0px 0px;
-  font-family: "DB HelvethaicaMon X Cond";
+  font-family: "DB HelvethaicaMon X";
 }
 
 .p-phone {
@@ -266,7 +266,7 @@ body {
   font-size: 42px;
   font-weight: bold;
   text-align: center;
-  font-family: "DB HelvethaicaMon X Cond";
+  font-family: "DB HelvethaicaMon X";
 }
 
 .div-submit {
@@ -283,7 +283,7 @@ body {
   /* font-weight: bold; */
   text-align: center;
   color: #fefaf1;
-  font-family: "DB HelvethaicaMon X Cond";
+  font-family: "DB HelvethaicaMon X";
 }
 
 /* Responsive */

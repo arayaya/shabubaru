@@ -17,8 +17,8 @@ function QueueReceptionPage() {
   const [notiNumber, setnotiNumber] = useState("");
   // const currentQueueA = randomNumber(1, 200);
   // const currentQueueB = randomNumber(1, 200);
-  const [currentQueueA, setCurrentQueueA] = useState(randomNumber(1, 300));
-  const [currentQueueB, setCurrentQueueB] = useState(randomNumber(1, 300));
+  const [currentQueueA, setCurrentQueueA] = useState(randomNumber(1, 99));
+  const [currentQueueB, setCurrentQueueB] = useState(randomNumber(1, 99));
   function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
@@ -100,10 +100,10 @@ function QueueReceptionPage() {
 
   return (
     <div>
-      <link
+      {/* <link
         href="https://db.onlinewebfonts.com/c/92ff8a15048d7347e0fae46d6386f338?family=DB+HelvethaicaMon+X+Cond"
         rel="stylesheet"
-      ></link>
+      ></link> */}
       <div className="container">
         <div className="left-section">
           <img className="logo" src="./img/logo.png" alt="logo" />
